@@ -25,13 +25,13 @@
 >- 基于jvm monitorenter及monitorexit字节码指令，是一种重量级锁。
 >- JVM 1.6中加了许多优化，自旋、锁消除、锁粗化、轻量级锁、偏向锁等。
 
-#####Lock
+##### Lock
  >- java.util.concurrent提供的锁机制，相比于synchronized支持许多新特性，支持中断、支持公平锁、支持绑定多个条件。
  >- ReentrantLock，与Synchronized类似，但是拥有Lock的新特性。
  >- ReentrantReadWriteLock, 读写锁，分为读锁及写锁，读锁之间不互斥，写锁之间互斥，读写之间互斥。
  >- StampedLock, Java1.8引入，使用乐观读的方式解决ReentrantReadWriteLock读多写少时写线程饥饿的问题。
 
-#####Semaphore
+##### Semaphore
 >- 常用于多个线程之间传递信号,支持多个线程获取许可，用完后归还，获取不到许可的线程被阻塞。
  
 ### java内存泄漏的定位与分析
